@@ -27,15 +27,18 @@ driver.get("https://transportforireland.b2clogin.com/transportforireland.onmicro
 time.sleep(randint(1, 3))
 usernameLoginBox = driver.find_element(By.ID, "signInName")
 usernameLoginBox.send_keys(EMAIL_ADDRESS)
-# time.sleep(randint(1, 3))
+
 passwordLoginBox = driver.find_element(By.ID, "password")
 passwordLoginBox.send_keys(LEAPCARD_PASSWORD)
 time.sleep(randint(1, 3))
+
 passwordLoginBox.send_keys(Keys.RETURN)
 time.sleep(randint(1, 3))
+
 sign_in_btn  = driver.find_element(By.LINK_TEXT, 'Sign In')
 sign_in_btn.click()
 time.sleep(randint(3, 5))
+
 selectBox = driver.find_element(By.ID, "ContentPlaceHolder1_TabContainer2_MyCardsTabPanel_ddlMyCardsList")
 selectBox.click()
 
